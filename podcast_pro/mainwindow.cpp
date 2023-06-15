@@ -8,7 +8,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     // center the widgets in vertical layout
-    ui->centralwidget->
     ui->verticalLayout->setAlignment(ui->volumeSlider, Qt::AlignCenter);
 }
 

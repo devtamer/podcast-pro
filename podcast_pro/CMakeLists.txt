@@ -15,6 +15,8 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Multimedia)
 set(PROJECT_SOURCES
         main.cpp
         mainwindow.cpp
+        audioplayer.h
+        audioplayer.cpp
         mainwindow.h
         mainwindow.ui
 )

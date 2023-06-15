@@ -5,263 +5,13 @@
 			"path" : "CMakeLists.txt"
 		},
 		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeSystem.cmake.in"
-		},
-		{
 			"isGenerated" : true,
 			"path" : "/home/tam/Desktop/projects/devtam/podcast_pro/build-podcast_pro-Desktop_Qt_6_4_3_GCC_64bit-Debug/CMakeFiles/3.24.2/CMakeSystem.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeNinjaFindMake.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
 			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Platform/Linux-Determine-CXX.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/GNU-FindBinUtils.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in"
 		},
 		{
 			"isGenerated" : true,
@@ -331,65 +81,6 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in"
-		},
-		{
-			"isGenerated" : true,
-			"path" : "/home/tam/Desktop/projects/devtam/podcast_pro/build-podcast_pro-Desktop_Qt_6_4_3_GCC_64bit-Debug/CMakeFiles/3.24.2/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1919,6 +1610,214 @@
 		{
 			"isExternal" : true,
 			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Multimedia/Qt6MultimediaDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6NetworkConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6NetworkConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6NetworkDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6NetworkTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6NetworkTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6NetworkAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6NetworkVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6NetworkPlugins.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6QGlibNetworkInformationPluginConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6QGlibNetworkInformationPluginTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6QGlibNetworkInformationPluginTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6QGlibNetworkInformationPluginAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6QNetworkManagerNetworkInformationPluginConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6QNetworkManagerNetworkInformationPluginTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6QNetworkManagerNetworkInformationPluginTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6QNetworkManagerNetworkInformationPluginAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Multimedia/Qt6MultimediaAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Multimedia/Qt6MultimediaVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Multimedia/Qt6MultimediaPlugins.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginAdditionalTargetInfo.cmake"
 		}
 	],
 	"kind" : "cmakeFiles",

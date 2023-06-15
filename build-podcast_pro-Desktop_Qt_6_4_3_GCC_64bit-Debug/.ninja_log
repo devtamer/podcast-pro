@@ -1,0 +1,16 @@
+# ninja log v5
+171	1353	1686870519076305704	CMakeFiles/podcast_pro.dir/mainwindow.cpp.o	9ad72233dd8b175e
+0	3	0	CMakeFiles/clean.additional	e3937fe23b3d6d6c
+2	171	1686870517896254208	/home/tam/Desktop/projects/devtam/podcast_pro/build-podcast_pro-Desktop_Qt_6_4_3_GCC_64bit-Debug/podcast_pro_autogen/timestamp	1258b75adbec4cad
+2	171	1686870517896254208	/home/tam/Desktop/projects/devtam/podcast_pro/build-podcast_pro-Desktop_Qt_6_4_3_GCC_64bit-Debug/podcast_pro_autogen/mocs_compilation.cpp	1258b75adbec4cad
+171	1160	1686870518884297329	CMakeFiles/podcast_pro.dir/podcast_pro_autogen/mocs_compilation.cpp.o	4295082550e66990
+1042	1254	1686856023691803794	podcast_pro	dfe13610d6c45477
+2	171	1686870517896254208	podcast_pro_autogen/mocs_compilation.cpp	1258b75adbec4cad
+3	6	0	clean	5bcf422c1ee7a62e
+171	1158	1686870518884297329	CMakeFiles/podcast_pro.dir/main.cpp.o	d0757c3f9302c712
+2	171	1686870517896254208	podcast_pro_autogen/timestamp	1258b75adbec4cad
+3	12	1686870579198854923	podcast_pro_autogen/timestamp	1258b75adbec4cad
+3	12	1686870579198854923	podcast_pro_autogen/mocs_compilation.cpp	1258b75adbec4cad
+3	12	1686870579198854923	/home/tam/Desktop/projects/devtam/podcast_pro/build-podcast_pro-Desktop_Qt_6_4_3_GCC_64bit-Debug/podcast_pro_autogen/timestamp	1258b75adbec4cad
+3	12	1686870579198854923	/home/tam/Desktop/projects/devtam/podcast_pro/build-podcast_pro-Desktop_Qt_6_4_3_GCC_64bit-Debug/podcast_pro_autogen/mocs_compilation.cpp	1258b75adbec4cad
+13	1106	1686870580290899929	CMakeFiles/podcast_pro.dir/mainwindow.cpp.o	9ad72233dd8b175e

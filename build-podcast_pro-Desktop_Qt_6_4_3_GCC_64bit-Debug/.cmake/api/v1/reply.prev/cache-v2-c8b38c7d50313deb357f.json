@@ -2018,6 +2018,18 @@
 			"value" : "OFF"
 		},
 		{
+			"name" : "QT_FEATURE_alsa",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: alsa (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
+		},
+		{
 			"name" : "QT_FEATURE_android_style_assets",
 			"properties" : 
 			[
@@ -2072,6 +2084,18 @@
 				{
 					"name" : "HELPSTRING",
 					"value" : "Qt feature: arm_crypto (from target Qt6::Core)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "QT_FEATURE_avfoundation",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: avfoundation (from target Qt6::Multimedia)"
 				}
 			],
 			"type" : "INTERNAL",
@@ -2232,6 +2256,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_brotli",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: brotli (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
 		},
 		{
 			"name" : "QT_FEATURE_buttongroup",
@@ -2472,6 +2508,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_coreaudio",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: coreaudio (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
 		},
 		{
 			"name" : "QT_FEATURE_cpp_winrt",
@@ -2870,6 +2918,18 @@
 			"value" : "ON"
 		},
 		{
+			"name" : "QT_FEATURE_dnslookup",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: dnslookup (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
 			"name" : "QT_FEATURE_dockwidget",
 			"properties" : 
 			[
@@ -2912,6 +2972,18 @@
 				{
 					"name" : "HELPSTRING",
 					"value" : "Qt feature: drm_atomic (from target Qt6::Gui)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_dtls",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: dtls (from target Qt6::Network)"
 				}
 			],
 			"type" : "INTERNAL",
@@ -3170,12 +3242,36 @@
 			"value" : "ON"
 		},
 		{
+			"name" : "QT_FEATURE_evr",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: evr (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
+		},
+		{
 			"name" : "QT_FEATURE_f16c",
 			"properties" : 
 			[
 				{
 					"name" : "HELPSTRING",
 					"value" : "Qt feature: f16c (from target Qt6::Core)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_ffmpeg",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: ffmpeg (from target Qt6::Multimedia)"
 				}
 			],
 			"type" : "INTERNAL",
@@ -3434,6 +3530,18 @@
 			"value" : "ON"
 		},
 		{
+			"name" : "QT_FEATURE_getifaddrs",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: getifaddrs (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
 			"name" : "QT_FEATURE_gif",
 			"properties" : 
 			[
@@ -3470,6 +3578,18 @@
 			"value" : "ON"
 		},
 		{
+			"name" : "QT_FEATURE_gpu_vivante",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: gpu_vivante (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
+		},
+		{
 			"name" : "QT_FEATURE_graphicseffect",
 			"properties" : 
 			[
@@ -3504,6 +3624,78 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_gssapi",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: gssapi (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_gstreamer",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: gstreamer (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_gstreamer_1_0",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: gstreamer_1_0 (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_gstreamer_app",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: gstreamer_app (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_gstreamer_gl",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: gstreamer_gl (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_gstreamer_photography",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: gstreamer_photography (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
 		},
 		{
 			"name" : "QT_FEATURE_gtk3",
@@ -3578,6 +3770,18 @@
 			"value" : "ON"
 		},
 		{
+			"name" : "QT_FEATURE_http",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: http (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
 			"name" : "QT_FEATURE_ico",
 			"properties" : 
 			[
@@ -3612,6 +3816,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_ifr_index",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: ifr_index (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
 		},
 		{
 			"name" : "QT_FEATURE_im",
@@ -3806,6 +4022,18 @@
 			"value" : "OFF"
 		},
 		{
+			"name" : "QT_FEATURE_ipv6ifname",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: ipv6ifname (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
 			"name" : "QT_FEATURE_islamiccivilcalendar",
 			"properties" : 
 			[
@@ -3974,6 +4202,18 @@
 			"value" : "OFF"
 		},
 		{
+			"name" : "QT_FEATURE_libproxy",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: libproxy (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
+		},
+		{
 			"name" : "QT_FEATURE_library",
 			"properties" : 
 			[
@@ -4022,6 +4262,42 @@
 			"value" : "ON"
 		},
 		{
+			"name" : "QT_FEATURE_linux_dmabuf",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: linux_dmabuf (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_linux_netlink",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: linux_netlink (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_linux_v4l",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: linux_v4l (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
 			"name" : "QT_FEATURE_linuxfb",
 			"properties" : 
 			[
@@ -4052,6 +4328,18 @@
 				{
 					"name" : "HELPSTRING",
 					"value" : "Qt feature: listwidget (from target Qt6::Widgets)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_localserver",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: localserver (from target Qt6::Network)"
 				}
 			],
 			"type" : "INTERNAL",
@@ -4178,6 +4466,18 @@
 			"value" : "OFF"
 		},
 		{
+			"name" : "QT_FEATURE_mmrenderer",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: mmrenderer (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
+		},
+		{
 			"name" : "QT_FEATURE_movie",
 			"properties" : 
 			[
@@ -4238,6 +4538,54 @@
 			"value" : "ON"
 		},
 		{
+			"name" : "QT_FEATURE_networkdiskcache",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: networkdiskcache (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_networkinterface",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: networkinterface (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_networklistmanager",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: networklistmanager (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "QT_FEATURE_networkproxy",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: networkproxy (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
 			"name" : "QT_FEATURE_no_direct_extern_access",
 			"properties" : 
 			[
@@ -4260,6 +4608,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "OFF"
+		},
+		{
+			"name" : "QT_FEATURE_ocsp",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: ocsp (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
 		},
 		{
 			"name" : "QT_FEATURE_opengl",
@@ -4320,6 +4680,54 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "OFF"
+		},
+		{
+			"name" : "QT_FEATURE_opensles",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: opensles (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "QT_FEATURE_openssl",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: openssl (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_openssl_linked",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: openssl_linked (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "QT_FEATURE_opensslv11",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: opensslv11 (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
 		},
 		{
 			"name" : "QT_FEATURE_openvg",
@@ -4562,6 +4970,42 @@
 			"value" : "ON"
 		},
 		{
+			"name" : "QT_FEATURE_publicsuffix_qt",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: publicsuffix_qt (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_publicsuffix_system",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: publicsuffix_system (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_pulseaudio",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: pulseaudio (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
 			"name" : "QT_FEATURE_pushbutton",
 			"properties" : 
 			[
@@ -4754,6 +5198,18 @@
 			"value" : "ON"
 		},
 		{
+			"name" : "QT_FEATURE_schannel",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: schannel (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
+		},
+		{
 			"name" : "QT_FEATURE_scrollarea",
 			"properties" : 
 			[
@@ -4788,6 +5244,30 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_sctp",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: sctp (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "QT_FEATURE_securetransport",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: securetransport (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
 		},
 		{
 			"name" : "QT_FEATURE_separate_debug_info",
@@ -4946,12 +5426,48 @@
 			"value" : "OFF"
 		},
 		{
+			"name" : "QT_FEATURE_socks5",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: socks5 (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
 			"name" : "QT_FEATURE_sortfilterproxymodel",
 			"properties" : 
 			[
 				{
 					"name" : "HELPSTRING",
 					"value" : "Qt feature: sortfilterproxymodel (from target Qt6::Core)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_spatialaudio",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: spatialaudio (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_spatialaudio_quick3d",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: spatialaudio_quick3d (from target Qt6::Multimedia)"
 				}
 			],
 			"type" : "INTERNAL",
@@ -5052,6 +5568,30 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_ssl",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: ssl (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_sspi",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: sspi (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
 		},
 		{
 			"name" : "QT_FEATURE_ssse3",
@@ -5366,6 +5906,18 @@
 			"value" : "OFF"
 		},
 		{
+			"name" : "QT_FEATURE_system_proxies",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: system_proxies (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
 			"name" : "QT_FEATURE_system_textmarkdownreader",
 			"properties" : 
 			[
@@ -5678,6 +6230,18 @@
 			"value" : "ON"
 		},
 		{
+			"name" : "QT_FEATURE_topleveldomain",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: topleveldomain (from target Qt6::Network)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
 			"name" : "QT_FEATURE_translation",
 			"properties" : 
 			[
@@ -5744,6 +6308,18 @@
 				{
 					"name" : "HELPSTRING",
 					"value" : "Qt feature: tuiotouch (from target Qt6::Gui)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_udpsocket",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: udpsocket (from target Qt6::Network)"
 				}
 			],
 			"type" : "INTERNAL",
@@ -5846,6 +6422,18 @@
 			"value" : "OFF"
 		},
 		{
+			"name" : "QT_FEATURE_vaapi",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: vaapi (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
+		},
+		{
 			"name" : "QT_FEATURE_vaes",
 			"properties" : 
 			[
@@ -5868,6 +6456,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_videotoolbox",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: videotoolbox (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
 		},
 		{
 			"name" : "QT_FEATURE_vkgen",
@@ -5930,6 +6530,18 @@
 			"value" : "ON"
 		},
 		{
+			"name" : "QT_FEATURE_wasm",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: wasm (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
+		},
+		{
 			"name" : "QT_FEATURE_whatsthis",
 			"properties" : 
 			[
@@ -5988,6 +6600,30 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_wmf",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: wmf (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "QT_FEATURE_wmsdk",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: wmsdk (from target Qt6::Multimedia)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
 		},
 		{
 			"name" : "QT_FEATURE_xcb",
@@ -6264,6 +6900,30 @@
 			],
 			"type" : "PATH",
 			"value" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Gui"
+		},
+		{
+			"name" : "Qt6Multimedia_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Qt6Multimedia."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Multimedia"
+		},
+		{
+			"name" : "Qt6Network_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Qt6Network."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6Network"
 		},
 		{
 			"name" : "Qt6WidgetsTools_DIR",
