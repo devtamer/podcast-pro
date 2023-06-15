@@ -1,0 +1,9 @@
+/Users/ts/Desktop/projects/podcast-pro/build-podcast_pro-Qt_6_4_2_for_macOS-Debug/CMakeFiles/podcast_pro.dir
+/Users/ts/Desktop/projects/podcast-pro/build-podcast_pro-Qt_6_4_2_for_macOS-Debug/CMakeFiles/edit_cache.dir
+/Users/ts/Desktop/projects/podcast-pro/build-podcast_pro-Qt_6_4_2_for_macOS-Debug/CMakeFiles/rebuild_cache.dir
+/Users/ts/Desktop/projects/podcast-pro/build-podcast_pro-Qt_6_4_2_for_macOS-Debug/CMakeFiles/list_install_components.dir
+/Users/ts/Desktop/projects/podcast-pro/build-podcast_pro-Qt_6_4_2_for_macOS-Debug/CMakeFiles/install.dir
+/Users/ts/Desktop/projects/podcast-pro/build-podcast_pro-Qt_6_4_2_for_macOS-Debug/CMakeFiles/install/local.dir
+/Users/ts/Desktop/projects/podcast-pro/build-podcast_pro-Qt_6_4_2_for_macOS-Debug/CMakeFiles/install/strip.dir
+/Users/ts/Desktop/projects/podcast-pro/build-podcast_pro-Qt_6_4_2_for_macOS-Debug/CMakeFiles/podcast_pro_autogen_timestamp_deps.dir
+/Users/ts/Desktop/projects/podcast-pro/build-podcast_pro-Qt_6_4_2_for_macOS-Debug/CMakeFiles/podcast_pro_autogen.dir

@@ -1,0 +1,9 @@
+# ninja log v5
+0	277	1686694821214826151	podcast_pro_autogen/timestamp	7039eaaba630a846
+0	277	1686694821214826151	podcast_pro_autogen/mocs_compilation.cpp	7039eaaba630a846
+0	277	1686694821214826151	/Users/ts/Desktop/projects/podcast-pro/build-podcast_pro-Qt_6_4_2_for_macOS-Debug/podcast_pro_autogen/timestamp	7039eaaba630a846
+0	277	1686694821214826151	/Users/ts/Desktop/projects/podcast-pro/build-podcast_pro-Qt_6_4_2_for_macOS-Debug/podcast_pro_autogen/mocs_compilation.cpp	7039eaaba630a846
+277	1091	1686694822033254479	CMakeFiles/podcast_pro.dir/podcast_pro_autogen/mocs_compilation.cpp.o	ec1e978d614be48e
+277	1099	1686694822041624747	CMakeFiles/podcast_pro.dir/main.cpp.o	44fd1b3b07c5b0f1
+278	1115	1686694822057561059	CMakeFiles/podcast_pro.dir/mainwindow.cpp.o	3176ff3b50b01cdf
+1115	1238	1686694822183479521	podcast_pro.app/Contents/MacOS/podcast_pro	eadc0d76ef6bcc4e
