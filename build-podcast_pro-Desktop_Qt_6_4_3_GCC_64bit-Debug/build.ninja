@@ -190,7 +190,7 @@ build podcast_pro_autogen/timestamp podcast_pro_autogen/mocs_compilation.cpp | $
 #############################################
 # Phony custom command for CMakeFiles/podcast_pro_autogen_timestamp_deps
 
-build CMakeFiles/podcast_pro_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/podcast_pro_autogen_timestamp_deps: phony /home/tam/Qt/5.15.2/gcc_64/lib/libQt5Multimedia.so.5.15.2 /home/tam/Qt/5.15.2/gcc_64/lib/libQt5Widgets.so.5.15.2 /home/tam/Qt/5.15.2/gcc_64/bin/moc /home/tam/Qt/5.15.2/gcc_64/bin/uic
+build CMakeFiles/podcast_pro_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/podcast_pro_autogen_timestamp_deps: phony /home/tam/Qt/5.15.2/gcc_64/lib/libQt5Widgets.so.5.15.2 /home/tam/Qt/5.15.2/gcc_64/bin/moc /home/tam/Qt/5.15.2/gcc_64/lib/libQt5Multimedia.so.5.15.2 /home/tam/Qt/5.15.2/gcc_64/bin/uic
 
 
 #############################################

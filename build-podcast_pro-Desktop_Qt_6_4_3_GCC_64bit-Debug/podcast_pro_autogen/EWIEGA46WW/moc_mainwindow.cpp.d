@@ -21,6 +21,10 @@
   /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qcontiguouscache.h \
   /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qdatastream.h \
   /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qdebug.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qdir.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qfile.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qfiledevice.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qfileinfo.h \
   /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qflags.h \
   /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qgenericatomic.h \
   /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qglobal.h \
@@ -107,7 +111,10 @@
   /home/tam/Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkrequest.h \
   /home/tam/Qt/5.15.2/gcc_64/include/QtNetwork/qtnetwork-config.h \
   /home/tam/Qt/5.15.2/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtWidgets/QFileDialog \
   /home/tam/Qt/5.15.2/gcc_64/include/QtWidgets/QMainWindow \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtWidgets/qdialog.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtWidgets/qfiledialog.h \
   /home/tam/Qt/5.15.2/gcc_64/include/QtWidgets/qmainwindow.h \
   /home/tam/Qt/5.15.2/gcc_64/include/QtWidgets/qsizepolicy.h \
   /home/tam/Qt/5.15.2/gcc_64/include/QtWidgets/qtabwidget.h \

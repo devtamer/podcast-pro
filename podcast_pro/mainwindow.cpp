@@ -16,7 +16,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     //set up connections
     connect(ui->volumeSlider, &QSlider::valueChanged, m_audioPlayer, &AudioPlayer::setVolume);
-
+    connect(ui->skipButton, &QPushButton::clicked, m_audioPlayer, &AudioPlayer::skip);
+    connect(ui->backButton, &QPushButton::clicked, m_audioPlayer, &AudioPlayer::previous);
+    connect(ui->uploadFiles, &QAction::triggered, this, &MainWindow::onUploadFiles);
     connect(ui->playButton, &QPushButton::clicked, this, [&]() {
         if(m_audioPlayer->state()== QMediaPlayer::PlayingState){
             m_audioPlayer->pause();
@@ -25,13 +27,16 @@ MainWindow::MainWindow(QWidget *parent)
             m_audioPlayer->play();
         }
     });
-    connect(ui->skipButton, &QPushButton::clicked, m_audioPlayer, &AudioPlayer::skip);
-    connect(ui->backButton, &QPushButton::clicked, m_audioPlayer, &AudioPlayer::previous);
+
 
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+void MainWindow::onUploadFiles(){
+    QStringList filePaths = QFileDialog::getOpenFileNames(this, "Select one or more files to open");
+    m_audioPlayer->loadFiles(filePaths);
 }
 

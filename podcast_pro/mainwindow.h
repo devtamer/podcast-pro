@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QFileDialog>
 #include "audioplayer.h"
 
 QT_BEGIN_NAMESPACE
@@ -19,6 +20,7 @@ public:
 private:
     Ui::MainWindow *ui;
     AudioPlayer *m_audioPlayer;
+    void onUploadFiles();
 
 };
 #endif // MAINWINDOW_H

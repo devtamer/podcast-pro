@@ -10,11 +10,13 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSlider>
@@ -27,6 +29,7 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QAction *uploadFiles;
     QWidget *centralwidget;
     QSlider *progressBar;
     QListWidget *PodcastList;
@@ -40,6 +43,7 @@ public:
     QPushButton *playButton;
     QPushButton *skipButton;
     QMenuBar *menubar;
+    QMenu *menuUpload;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -47,6 +51,8 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(400, 600);
+        uploadFiles = new QAction(MainWindow);
+        uploadFiles->setObjectName(QString::fromUtf8("uploadFiles"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         progressBar = new QSlider(centralwidget);
@@ -103,10 +109,15 @@ public:
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
         menubar->setGeometry(QRect(0, 0, 400, 22));
+        menuUpload = new QMenu(menubar);
+        menuUpload->setObjectName(QString::fromUtf8("menuUpload"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
+
+        menubar->addAction(menuUpload->menuAction());
+        menuUpload->addAction(uploadFiles);
 
         retranslateUi(MainWindow);
 
@@ -116,10 +127,12 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        uploadFiles->setText(QCoreApplication::translate("MainWindow", "Upload", nullptr));
         volumeLabel->setText(QCoreApplication::translate("MainWindow", "Volume", nullptr));
         backButton->setText(QCoreApplication::translate("MainWindow", "<", nullptr));
         playButton->setText(QCoreApplication::translate("MainWindow", "Pause", nullptr));
         skipButton->setText(QCoreApplication::translate("MainWindow", ">", nullptr));
+        menuUpload->setTitle(QCoreApplication::translate("MainWindow", "Upload", nullptr));
     } // retranslateUi
 
 };
