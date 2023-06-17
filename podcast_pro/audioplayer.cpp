@@ -15,20 +15,30 @@ AudioPlayer::AudioPlayer(QObject *parent)
 // skip method: check if vector has anything in it,
 // if it does then iterate to next file
 void AudioPlayer::loadFiles(const QStringList &filePaths){
-    QVector<QString> qVecFilePaths = QVector<QString>(filePaths.begin(), filePaths.end());
-    m_files = filePaths.toVector().toStdVector();
+    m_files = std::vector<QString>(filePaths.begin(), filePaths.end());
+    if(!m_files.empty()){
+        m_currentIndex = 0;
+        m_player->setMedia(QUrl::fromLocalFile(m_files[m_currentIndex]));
 
+    }
 }
 void AudioPlayer::skip(){
     if(m_files.empty()){
-        return
+        return;
     }
-    for(int i = m_currentIndex; i <= (m_files.size()-i); i++){
+    m_currentIndex = (m_currentIndex + 1) % m_files.size();
+    m_player->setMedia(QUrl::fromLocalFile(m_files[m_currentIndex]));
 
-    }
 }
 // previous method: check if vector has anything in it,
 // if it does go to previous item (until 0 index)
+void AudioPlayer::previous(){
+    if(m_files.empty()){
+        return;
+    }
+    m_currentIndex = (m_currentIndex - 1 + m_files.size()) % m_files.size();
+    m_player->setMedia(QUrl::fromLocalFile(m_files[m_currentIndex]));
+}
 void AudioPlayer::play(){
     m_player->play();
 }
