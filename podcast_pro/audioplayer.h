@@ -15,9 +15,16 @@ public:
     void play();
     void pause();
     void setVolume(int volume);
+    void loadFiles(const QStringList &filePaths);
+    void skip();
+    void previous();
+    QMediaPlayer::State state() const;
+    QMediaPlayer::MediaStatus mediaStatus() const;
 
 private:
     QMediaPlayer *m_player;
+    std::vector<QString> m_files;
+    int m_currentIndex=0;
 
 };
 

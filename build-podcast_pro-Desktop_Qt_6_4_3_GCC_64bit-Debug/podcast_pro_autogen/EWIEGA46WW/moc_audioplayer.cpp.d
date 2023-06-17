@@ -1,96 +1,85 @@
 /home/tam/Desktop/projects/devtam/podcast_pro/build-podcast_pro-Desktop_Qt_6_4_3_GCC_64bit-Debug/podcast_pro_autogen/EWIEGA46WW/moc_audioplayer.cpp: /home/tam/Desktop/projects/devtam/podcast_pro/podcast_pro/audioplayer.h \
   /home/tam/Desktop/projects/devtam/podcast_pro/build-podcast_pro-Desktop_Qt_6_4_3_GCC_64bit-Debug/podcast_pro_autogen/moc_predefs.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/QObject \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qalgorithms.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qanystringview.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qarraydata.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qarraydataops.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qarraydatapointer.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qatomic.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qatomic_cxx11.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qbasicatomic.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qbindingstorage.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qbytearray.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qbytearrayalgorithms.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qbytearraylist.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qbytearrayview.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qchar.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qcompare.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qcompare_impl.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qcompilerdetection.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qconfig.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qcontainerfwd.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qcontainerinfo.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qcontainertools_impl.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qcontiguouscache.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qdatastream.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qdebug.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qflags.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qforeach.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qgenericatomic.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qglobal.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qglobalstatic.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qhash.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qhashfunctions.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qiodevicebase.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qiterable.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qiterator.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qlist.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qlogging.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qmap.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qmath.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qmetacontainer.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qmetaobject.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qmetatype.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qnamespace.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qnumeric.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qobject.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qobject_impl.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qobjectdefs.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qobjectdefs_impl.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qpair.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qprocessordetection.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qrefcount.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qscopedpointer.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qscopeguard.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qset.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qshareddata.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qshareddata_impl.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qsharedpointer.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qsharedpointer_impl.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qstring.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qstringalgorithms.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qstringconverter_base.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qstringfwd.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qstringlist.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qstringliteral.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qstringmatcher.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qstringtokenizer.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qstringview.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qsysinfo.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qsystemdetection.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qtaggedpointer.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qtconfigmacros.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qtcore-config.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qtcoreexports.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qtextstream.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qtmetamacros.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qtypeinfo.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qurl.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qutf8stringview.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qvariant.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qvarlengtharray.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtCore/qversiontagging.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtGui/qtgui-config.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtGui/qtguiexports.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtGui/qtguiglobal.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtMultimedia/QMediaPlayer \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtMultimedia/qaudio.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtMultimedia/qmediaenumdebug.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtMultimedia/qmediaplayer.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtMultimedia/qtmultimedia-config.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtMultimedia/qtmultimediaexports.h \
-  /home/tam/Qt/6.4.3/gcc_64/include/QtMultimedia/qtmultimediaglobal.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/QObject \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/QSharedDataPointer \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/QString \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/QUrl \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/QVariant \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qalgorithms.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qarraydata.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qatomic.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qatomic_cxx11.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qbasicatomic.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qbytearray.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qbytearraylist.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qchar.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qcompilerdetection.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qconfig.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qcontainerfwd.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qcontainertools_impl.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qcontiguouscache.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qdebug.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qflags.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qgenericatomic.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qglobal.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qglobalstatic.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qhash.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qhashfunctions.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qiodevice.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qiterator.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qlist.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qlocale.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qlogging.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qmap.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qmetaobject.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qmetatype.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qnamespace.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qnumeric.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qobject.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qobject_impl.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qobjectdefs.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qobjectdefs_impl.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qpair.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qprocessordetection.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qrefcount.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qregexp.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qscopedpointer.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qset.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qshareddata.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qsharedpointer.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qsharedpointer_impl.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qstring.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qstringalgorithms.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qstringlist.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qstringliteral.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qstringmatcher.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qstringview.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qsysinfo.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qsystemdetection.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qtcore-config.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qtextstream.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qtypeinfo.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qurl.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qvariant.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qvarlengtharray.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qvector.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtCore/qversiontagging.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtGui/qtgui-config.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtGui/qtguiglobal.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtMultimedia/QMediaPlayer \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtMultimedia/qaudio.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtMultimedia/qmediacontent.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtMultimedia/qmediaenumdebug.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtMultimedia/qmediaobject.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtMultimedia/qmediaplayer.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtMultimedia/qmediaresource.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtMultimedia/qmultimedia.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtMultimedia/qtmultimedia-config.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtMultimedia/qtmultimediaglobal.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtNetwork/qnetworkrequest.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtNetwork/qtnetwork-config.h \
+  /home/tam/Qt/5.15.2/gcc_64/include/QtNetwork/qtnetworkglobal.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -120,7 +109,6 @@
   /usr/include/c++/11/bits/cpp_type_traits.h \
   /usr/include/c++/11/bits/cxxabi_forced.h \
   /usr/include/c++/11/bits/cxxabi_init_exception.h \
-  /usr/include/c++/11/bits/enable_special_members.h \
   /usr/include/c++/11/bits/erase_if.h \
   /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/exception_defines.h \
@@ -144,7 +132,6 @@
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/bits/ostream_insert.h \
-  /usr/include/c++/11/bits/parse_numbers.h \
   /usr/include/c++/11/bits/postypes.h \
   /usr/include/c++/11/bits/predefined_ops.h \
   /usr/include/c++/11/bits/ptr_traits.h \
@@ -159,7 +146,6 @@
   /usr/include/c++/11/bits/shared_ptr.h \
   /usr/include/c++/11/bits/shared_ptr_atomic.h \
   /usr/include/c++/11/bits/shared_ptr_base.h \
-  /usr/include/c++/11/bits/specfun.h \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/c++/11/bits/std_mutex.h \
@@ -195,16 +181,13 @@
   /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/cctype \
   /usr/include/c++/11/cerrno \
-  /usr/include/c++/11/chrono \
   /usr/include/c++/11/climits \
   /usr/include/c++/11/clocale \
-  /usr/include/c++/11/cmath \
   /usr/include/c++/11/compare \
   /usr/include/c++/11/concepts \
   /usr/include/c++/11/cstddef \
   /usr/include/c++/11/cstdint \
   /usr/include/c++/11/cstdlib \
-  /usr/include/c++/11/cstring \
   /usr/include/c++/11/cwchar \
   /usr/include/c++/11/cwctype \
   /usr/include/c++/11/debug/assertions.h \
@@ -230,7 +213,6 @@
   /usr/include/c++/11/new \
   /usr/include/c++/11/numbers \
   /usr/include/c++/11/numeric \
-  /usr/include/c++/11/optional \
   /usr/include/c++/11/ostream \
   /usr/include/c++/11/pstl/execution_defs.h \
   /usr/include/c++/11/pstl/glue_algorithm_defs.h \
@@ -240,24 +222,11 @@
   /usr/include/c++/11/streambuf \
   /usr/include/c++/11/string \
   /usr/include/c++/11/string_view \
-  /usr/include/c++/11/tr1/bessel_function.tcc \
-  /usr/include/c++/11/tr1/beta_function.tcc \
-  /usr/include/c++/11/tr1/ell_integral.tcc \
-  /usr/include/c++/11/tr1/exp_integral.tcc \
-  /usr/include/c++/11/tr1/gamma.tcc \
-  /usr/include/c++/11/tr1/hypergeometric.tcc \
-  /usr/include/c++/11/tr1/legendre_function.tcc \
-  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
-  /usr/include/c++/11/tr1/poly_hermite.tcc \
-  /usr/include/c++/11/tr1/poly_laguerre.tcc \
-  /usr/include/c++/11/tr1/riemann_zeta.tcc \
-  /usr/include/c++/11/tr1/special_function_util.h \
   /usr/include/c++/11/tuple \
   /usr/include/c++/11/type_traits \
   /usr/include/c++/11/typeinfo \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/utility \
-  /usr/include/c++/11/variant \
   /usr/include/c++/11/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -373,5 +342,4 @@
   /usr/include/x86_64-linux-gnu/sys/syscall.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h

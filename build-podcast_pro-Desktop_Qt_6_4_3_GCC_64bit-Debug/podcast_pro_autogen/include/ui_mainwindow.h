@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 6.4.3
+** Created by: Qt User Interface Compiler version 5.15.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -36,40 +36,40 @@ public:
     QLabel *volumeLabel;
     QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout;
-    QPushButton *previous;
-    QPushButton *pause;
-    QPushButton *next;
+    QPushButton *backButton;
+    QPushButton *playButton;
+    QPushButton *skipButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName("MainWindow");
+            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(400, 600);
         centralwidget = new QWidget(MainWindow);
-        centralwidget->setObjectName("centralwidget");
+        centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         progressBar = new QSlider(centralwidget);
-        progressBar->setObjectName("progressBar");
+        progressBar->setObjectName(QString::fromUtf8("progressBar"));
         progressBar->setGeometry(QRect(50, 350, 300, 25));
         progressBar->setOrientation(Qt::Horizontal);
         PodcastList = new QListWidget(centralwidget);
-        PodcastList->setObjectName("PodcastList");
+        PodcastList->setObjectName(QString::fromUtf8("PodcastList"));
         PodcastList->setGeometry(QRect(0, 0, 400, 192));
         layoutWidget = new QWidget(centralwidget);
-        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(330, 210, 54, 114));
         verticalLayout = new QVBoxLayout(layoutWidget);
-        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         volumeSlider = new QSlider(layoutWidget);
-        volumeSlider->setObjectName("volumeSlider");
+        volumeSlider->setObjectName(QString::fromUtf8("volumeSlider"));
         volumeSlider->setOrientation(Qt::Vertical);
 
         verticalLayout->addWidget(volumeSlider);
 
         volumeLabel = new QLabel(layoutWidget);
-        volumeLabel->setObjectName("volumeLabel");
+        volumeLabel->setObjectName(QString::fromUtf8("volumeLabel"));
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -79,33 +79,33 @@ public:
         verticalLayout->addWidget(volumeLabel);
 
         layoutWidget1 = new QWidget(centralwidget);
-        layoutWidget1->setObjectName("layoutWidget1");
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
         layoutWidget1->setGeometry(QRect(120, 380, 254, 32));
         horizontalLayout = new QHBoxLayout(layoutWidget1);
-        horizontalLayout->setObjectName("horizontalLayout");
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        previous = new QPushButton(layoutWidget1);
-        previous->setObjectName("previous");
+        backButton = new QPushButton(layoutWidget1);
+        backButton->setObjectName(QString::fromUtf8("backButton"));
 
-        horizontalLayout->addWidget(previous);
+        horizontalLayout->addWidget(backButton);
 
-        pause = new QPushButton(layoutWidget1);
-        pause->setObjectName("pause");
+        playButton = new QPushButton(layoutWidget1);
+        playButton->setObjectName(QString::fromUtf8("playButton"));
 
-        horizontalLayout->addWidget(pause);
+        horizontalLayout->addWidget(playButton);
 
-        next = new QPushButton(layoutWidget1);
-        next->setObjectName("next");
+        skipButton = new QPushButton(layoutWidget1);
+        skipButton->setObjectName(QString::fromUtf8("skipButton"));
 
-        horizontalLayout->addWidget(next);
+        horizontalLayout->addWidget(skipButton);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName("menubar");
+        menubar->setObjectName(QString::fromUtf8("menubar"));
         menubar->setGeometry(QRect(0, 0, 400, 22));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
-        statusbar->setObjectName("statusbar");
+        statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
@@ -117,9 +117,9 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         volumeLabel->setText(QCoreApplication::translate("MainWindow", "Volume", nullptr));
-        previous->setText(QCoreApplication::translate("MainWindow", "<", nullptr));
-        pause->setText(QCoreApplication::translate("MainWindow", "Pause", nullptr));
-        next->setText(QCoreApplication::translate("MainWindow", ">", nullptr));
+        backButton->setText(QCoreApplication::translate("MainWindow", "<", nullptr));
+        playButton->setText(QCoreApplication::translate("MainWindow", "Pause", nullptr));
+        skipButton->setText(QCoreApplication::translate("MainWindow", ">", nullptr));
     } // retranslateUi
 
 };

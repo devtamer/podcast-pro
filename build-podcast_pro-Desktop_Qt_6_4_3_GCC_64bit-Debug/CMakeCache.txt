@@ -169,7 +169,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //No help, variable specified on the command line.
-CMAKE_PREFIX_PATH:PATH=/home/tam/Qt/6.4.3/gcc_64
+CMAKE_PREFIX_PATH:PATH=/home/tam/Qt/5.15.2/gcc_64;/home/tam/Qt/6.4.3/gcc_64
 
 //Value Computed by CMake
 CMAKE_PROJECT_DESCRIPTION:STATIC=
@@ -295,10 +295,28 @@ QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH:STRING=
 QT_ADDITIONAL_PACKAGES_PREFIX_PATH:STRING=
 
 //The directory containing a CMake configuration file for QT.
-QT_DIR:PATH=/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6
+QT_DIR:PATH=/home/tam/Qt/5.15.2/gcc_64/lib/cmake/Qt5
 
 //No help, variable specified on the command line.
-QT_QMAKE_EXECUTABLE:FILEPATH=/home/tam/Qt/6.4.3/gcc_64/bin/qmake
+QT_QMAKE_EXECUTABLE:FILEPATH=/home/tam/Qt/5.15.2/gcc_64/bin/qmake
+
+//The directory containing a CMake configuration file for Qt5Core.
+Qt5Core_DIR:PATH=/home/tam/Qt/5.15.2/gcc_64/lib/cmake/Qt5Core
+
+//The directory containing a CMake configuration file for Qt5Gui.
+Qt5Gui_DIR:PATH=/home/tam/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui
+
+//The directory containing a CMake configuration file for Qt5Multimedia.
+Qt5Multimedia_DIR:PATH=/home/tam/Qt/5.15.2/gcc_64/lib/cmake/Qt5Multimedia
+
+//The directory containing a CMake configuration file for Qt5Network.
+Qt5Network_DIR:PATH=/home/tam/Qt/5.15.2/gcc_64/lib/cmake/Qt5Network
+
+//The directory containing a CMake configuration file for Qt5Widgets.
+Qt5Widgets_DIR:PATH=/home/tam/Qt/5.15.2/gcc_64/lib/cmake/Qt5Widgets
+
+//The directory containing a CMake configuration file for Qt5.
+Qt5_DIR:PATH=/home/tam/Qt/5.15.2/gcc_64/lib/cmake/Qt5
 
 //The directory containing a CMake configuration file for Qt6CoreTools.
 Qt6CoreTools_DIR:PATH=/home/tam/Qt/6.4.3/gcc_64/lib/cmake/Qt6CoreTools

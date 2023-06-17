@@ -80,21 +80,21 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="previous">
+      <widget class="QPushButton" name="backButton">
        <property name="text">
         <string>&lt;</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pause">
+      <widget class="QPushButton" name="playButton">
        <property name="text">
         <string>Pause</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="next">
+      <widget class="QPushButton" name="skipButton">
        <property name="text">
         <string>&gt;</string>
        </property>
