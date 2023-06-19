@@ -1,4 +1,5 @@
 #include "audioplayer.h"
+#include "qimage.h"
 
 AudioPlayer::AudioPlayer(QObject *parent)
     : QObject{parent}, m_player(new QMediaPlayer(this))
@@ -54,4 +55,16 @@ QMediaPlayer::State AudioPlayer::state() const {
 }
 QMediaPlayer::MediaStatus AudioPlayer::mediaStatus() const {
     return m_player->mediaStatus();
+}
+QString AudioPlayer::getTitle() const {
+    return m_player->metaData(QMediaMetaData::Title).toString();
+}
+QImage AudioPlayer::getCoverImage() const {
+    return m_player->metaData(QMediaMetaData::CoverArtImage).value<QImage>();
+}
+qint64 AudioPlayer::getPosition() const {
+    return m_player->position();
+}
+qint64 AudioPlayer::getDuration() const {
+    return m_player->duration();
 }

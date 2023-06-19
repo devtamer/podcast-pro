@@ -19,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->skipButton, &QPushButton::clicked, m_audioPlayer, &AudioPlayer::skip);
     connect(ui->backButton, &QPushButton::clicked, m_audioPlayer, &AudioPlayer::previous);
     connect(ui->uploadFiles, &QAction::triggered, this, &MainWindow::onUploadFiles);
+    connect
     connect(ui->playButton, &QPushButton::clicked, this, [&]() {
         if(m_audioPlayer->state()== QMediaPlayer::PlayingState){
             m_audioPlayer->pause();

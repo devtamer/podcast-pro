@@ -3,6 +3,8 @@
 
 #include <QObject>
 #include <QMediaPlayer>
+#include <QMediaMetaData>
+
 
 class AudioPlayer : public QObject
 {
@@ -20,7 +22,10 @@ public:
     void previous();
     QMediaPlayer::State state() const;
     QMediaPlayer::MediaStatus mediaStatus() const;
-
+    QString getTitle() const;
+    QImage getCoverImage() const;
+    qint64 getPosition() const;
+    qint64 getDuration() const;
 private:
     QMediaPlayer *m_player;
     std::vector<QString> m_files;
