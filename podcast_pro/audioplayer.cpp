@@ -4,8 +4,22 @@
 AudioPlayer::AudioPlayer(QObject *parent)
     : QObject{parent}, m_player(new QMediaPlayer(this))
 {
-    m_player->setVolume(50);
+    connect(m_player, &QMediaPlayer::metaDataAvailableChanged, this, [&](bool available) {
+        if (available) {
+            emit titleChanged(getTitle());
+            emit coverImageChanged(getCoverImage());
+            emit artistChanged(getArtist());
+        }
+    });
 
+
+    connect(m_player, &QMediaPlayer::positionChanged, this, [&](qint64 position) {
+        emit positionChanged(position);
+    });
+
+    connect(m_player, &QMediaPlayer::durationChanged, this, [&](qint64 duration) {
+        emit durationChanged(duration);
+    });
 }
 // not needed right now
 //void AudioPlayer::loadFile(const QString &filePath){
@@ -59,6 +73,10 @@ QMediaPlayer::MediaStatus AudioPlayer::mediaStatus() const {
 QString AudioPlayer::getTitle() const {
     return m_player->metaData(QMediaMetaData::Title).toString();
 }
+QString AudioPlayer::getArtist() const {
+    return m_player->metaData(QMediaMetaData::AlbumArtist).toString();
+}
+
 QImage AudioPlayer::getCoverImage() const {
     return m_player->metaData(QMediaMetaData::CoverArtImage).value<QImage>();
 }

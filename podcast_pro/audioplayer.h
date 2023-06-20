@@ -23,9 +23,17 @@ public:
     QMediaPlayer::State state() const;
     QMediaPlayer::MediaStatus mediaStatus() const;
     QString getTitle() const;
+    QString getArtist() const;
     QImage getCoverImage() const;
     qint64 getPosition() const;
     qint64 getDuration() const;
+signals:
+    void titleChanged(const QString &title);
+    void coverImageChanged(const QImage &coverImage);
+    void artistChanged(const QString &artist);
+    void positionChanged(qint64 position);
+    void durationChanged(qint64 duration);
+
 private:
     QMediaPlayer *m_player;
     std::vector<QString> m_files;

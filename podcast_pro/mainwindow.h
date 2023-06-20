@@ -21,6 +21,9 @@ private:
     Ui::MainWindow *ui;
     AudioPlayer *m_audioPlayer;
     void onUploadFiles();
+    void updateTitle(const QString &title);
+    void updateArtist(const QString &artist);
+    void updateCoverArt(const QImage &coverArt);
 
 };
 #endif // MAINWINDOW_H
