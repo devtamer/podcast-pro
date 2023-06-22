@@ -23,6 +23,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(m_audioPlayer, &AudioPlayer::titleChanged, this, &MainWindow::updateTitle);
     connect(m_audioPlayer, &AudioPlayer::artistChanged, this, &MainWindow::updateArtist);
     connect(m_audioPlayer, &AudioPlayer::coverImageChanged, this, &MainWindow::updateCoverArt);
+    connect(m_audioPlayer, &AudioPlayer::stateChanged, this, &MainWindow::updatePlayButton);
+    connect(m_audioPlayer, &AudioPlayer::positionChanged, this, &MainWindow::updateProgressBarPosition);
+    connect(m_audioPlayer, &AudioPlayer::durationChanged, this, &MainWindow::updateProgressBarMaximum);
     connect(ui->playButton, &QPushButton::clicked, this, [&]() {
         if(m_audioPlayer->state()== QMediaPlayer::PlayingState){
             m_audioPlayer->pause();
@@ -54,5 +57,20 @@ void MainWindow::updateCoverArt(const QImage &coverArt) {
     QPixmap pixmap = QPixmap::fromImage(coverArt);
     ui->coverArtLabel->setPixmap(pixmap);
 
+}
+void MainWindow::updatePlayButton(QMediaPlayer::PlaybackState state){
+    if(state == QMediaPlayer::PlayingState){
+        ui->playButton->setIcon(style()->standardIcon(QStyle::SP_MediaPause));
+    }
+    else{
+        ui->playButton->setIcon(style()->standardIcon(QStyle::SP_MediaPlay));
+    }
+}
+void MainWindow::updateProgressBarPosition(qint64 position) {
+    ui->progressBar->setValue(static_cast<int>(position));
+}
+
+void MainWindow::updateProgressBarMaximum(qint64 duration) {
+    ui->progressBar->setMaximum(static_cast<int>(duration));
 }
 

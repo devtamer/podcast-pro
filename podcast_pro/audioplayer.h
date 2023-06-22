@@ -4,6 +4,8 @@
 #include <QObject>
 #include <QMediaPlayer>
 #include <QMediaMetaData>
+#include <QAudioOutput>
+
 
 
 class AudioPlayer : public QObject
@@ -13,14 +15,15 @@ class AudioPlayer : public QObject
 public:
     // constructor prevents compiler from using this for implicit conversions
     explicit AudioPlayer(QObject *parent = nullptr);
+    ~AudioPlayer();
     void loadFile(const QString &filePath);
     void play();
     void pause();
-    void setVolume(int volume);
+    void setVolume(float volume);
     void loadFiles(const QStringList &filePaths);
     void skip();
     void previous();
-    QMediaPlayer::State state() const;
+    QMediaPlayer::PlaybackState state() const;
     QMediaPlayer::MediaStatus mediaStatus() const;
     QString getTitle() const;
     QString getArtist() const;
@@ -33,9 +36,10 @@ signals:
     void artistChanged(const QString &artist);
     void positionChanged(qint64 position);
     void durationChanged(qint64 duration);
-
+    void stateChanged(QMediaPlayer::PlaybackState state);
 private:
     QMediaPlayer *m_player;
+    QAudioOutput *m_audioOutput;
     std::vector<QString> m_files;
     int m_currentIndex=0;
 

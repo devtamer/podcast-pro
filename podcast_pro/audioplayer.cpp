@@ -2,24 +2,32 @@
 #include "qimage.h"
 
 AudioPlayer::AudioPlayer(QObject *parent)
-    : QObject{parent}, m_player(new QMediaPlayer(this))
+    : QObject{parent}, m_player(new QMediaPlayer(this)),
+      m_audioOutput(new QAudioOutput(this))
 {
-    connect(m_player, &QMediaPlayer::metaDataAvailableChanged, this, [&](bool available) {
-        if (available) {
-            emit titleChanged(getTitle());
-            emit coverImageChanged(getCoverImage());
-            emit artistChanged(getArtist());
-        }
+    m_player->setAudioOutput(m_audioOutput);
+    connect(m_player, &QMediaPlayer::metaDataChanged, this, [&]() {
+        emit titleChanged(getTitle());
+        emit coverImageChanged(getCoverImage());
+        emit artistChanged(getArtist());
     });
 
-
+    // position changed
     connect(m_player, &QMediaPlayer::positionChanged, this, [&](qint64 position) {
         emit positionChanged(position);
     });
-
+    // duration changed signal
     connect(m_player, &QMediaPlayer::durationChanged, this, [&](qint64 duration) {
         emit durationChanged(duration);
     });
+    // stateChanged signal (play/pause)
+    connect(m_player, &QMediaPlayer::playbackStateChanged, this, [&](QMediaPlayer::PlaybackState state) {
+        emit stateChanged(state);
+    });
+}
+AudioPlayer::~AudioPlayer() {
+    delete m_player;
+    delete m_audioOutput; // new line
 }
 // not needed right now
 //void AudioPlayer::loadFile(const QString &filePath){
@@ -33,7 +41,7 @@ void AudioPlayer::loadFiles(const QStringList &filePaths){
     m_files = std::vector<QString>(filePaths.begin(), filePaths.end());
     if(!m_files.empty()){
         m_currentIndex = 0;
-        m_player->setMedia(QUrl::fromLocalFile(m_files[m_currentIndex]));
+        m_player->setSource(QUrl::fromLocalFile(m_files[m_currentIndex]));
 
     }
 }
@@ -42,7 +50,7 @@ void AudioPlayer::skip(){
         return;
     }
     m_currentIndex = (m_currentIndex + 1) % m_files.size();
-    m_player->setMedia(QUrl::fromLocalFile(m_files[m_currentIndex]));
+    m_player->setSource(QUrl::fromLocalFile(m_files[m_currentIndex]));
 
 }
 // previous method: check if vector has anything in it,
@@ -52,7 +60,7 @@ void AudioPlayer::previous(){
         return;
     }
     m_currentIndex = (m_currentIndex - 1 + m_files.size()) % m_files.size();
-    m_player->setMedia(QUrl::fromLocalFile(m_files[m_currentIndex]));
+    m_player->setSource(QUrl::fromLocalFile(m_files[m_currentIndex]));
 }
 void AudioPlayer::play(){
     m_player->play();
@@ -60,25 +68,27 @@ void AudioPlayer::play(){
 void AudioPlayer::pause(){
     m_player->pause();
 }
-void AudioPlayer::setVolume(int volume){
-    m_player->setVolume(volume);
-
+void AudioPlayer::setVolume(float volume){
+    m_audioOutput->setVolume(volume);
 }
-QMediaPlayer::State AudioPlayer::state() const {
-    return m_player->state();
+QMediaPlayer::PlaybackState AudioPlayer::state() const {
+    return m_player->playbackState();
 }
 QMediaPlayer::MediaStatus AudioPlayer::mediaStatus() const {
     return m_player->mediaStatus();
 }
 QString AudioPlayer::getTitle() const {
-    return m_player->metaData(QMediaMetaData::Title).toString();
+    QMediaMetaData metaData = m_player->metaData();
+    return metaData.value(QMediaMetaData::Title).toString();
 }
 QString AudioPlayer::getArtist() const {
-    return m_player->metaData(QMediaMetaData::AlbumArtist).toString();
+    QMediaMetaData metaData = m_player->metaData();
+    return metaData.value(QMediaMetaData::AlbumArtist).toString();
 }
 
 QImage AudioPlayer::getCoverImage() const {
-    return m_player->metaData(QMediaMetaData::CoverArtImage).value<QImage>();
+    QMediaMetaData metaData = m_player->metaData();
+    return metaData.value(QMediaMetaData::CoverArtImage).value<QImage>();
 }
 qint64 AudioPlayer::getPosition() const {
     return m_player->position();
