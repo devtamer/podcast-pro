@@ -1,6 +1,6 @@
 #include "audioplayer.h"
 #include "qimage.h"
-
+#include <QFileInfo>
 AudioPlayer::AudioPlayer(QObject *parent)
     : QObject{parent}, m_player(new QMediaPlayer(this)),
       m_audioOutput(new QAudioOutput(this))
@@ -10,6 +10,9 @@ AudioPlayer::AudioPlayer(QObject *parent)
         emit titleChanged(getTitle());
         emit coverImageChanged(getCoverImage());
         emit artistChanged(getArtist());
+    });
+    connect(m_player, &QMediaPlayer::errorOccurred, this, [&](QMediaPlayer::Error error) {
+        qDebug() << "Error occurred: " << error;
     });
 
     // position changed
@@ -42,6 +45,13 @@ void AudioPlayer::loadFiles(const QStringList &filePaths){
     if(!m_files.empty()){
         m_currentIndex = 0;
         m_player->setSource(QUrl::fromLocalFile(m_files[m_currentIndex]));
+
+        // add the file paths to the list widget
+        for(const auto &filePath : filePaths){
+            QFileInfo fileInfo(filePath);
+            emit fileLoaded(fileInfo.fileName());
+        }
+
 
     }
 }
@@ -88,7 +98,7 @@ QString AudioPlayer::getArtist() const {
 
 QImage AudioPlayer::getCoverImage() const {
     QMediaMetaData metaData = m_player->metaData();
-    return metaData.value(QMediaMetaData::CoverArtImage).value<QImage>();
+    return metaData.value(QMediaMetaData::ThumbnailImage).value<QImage>();
 }
 qint64 AudioPlayer::getPosition() const {
     return m_player->position();

@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // center the widgets in vertical layout
     ui->verticalLayout->setAlignment(ui->volumeSlider, Qt::AlignCenter);
-
+    ui->menubar->setNativeMenuBar(false);
 
     //set up connections
     connect(ui->volumeSlider, &QSlider::valueChanged, m_audioPlayer, &AudioPlayer::setVolume);
@@ -26,6 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(m_audioPlayer, &AudioPlayer::stateChanged, this, &MainWindow::updatePlayButton);
     connect(m_audioPlayer, &AudioPlayer::positionChanged, this, &MainWindow::updateProgressBarPosition);
     connect(m_audioPlayer, &AudioPlayer::durationChanged, this, &MainWindow::updateProgressBarMaximum);
+    connect(m_audioPlayer, &AudioPlayer::fileLoaded, this, &MainWindow::addFileToList);
     connect(ui->playButton, &QPushButton::clicked, this, [&]() {
         if(m_audioPlayer->state()== QMediaPlayer::PlayingState){
             m_audioPlayer->pause();
@@ -54,6 +55,7 @@ void MainWindow::updateArtist(const QString &artist) {
 
 }
 void MainWindow::updateCoverArt(const QImage &coverArt) {
+    qDebug() << "updateCoverArt called, Image dimensions: " << coverArt.width() << "x" << coverArt.height();
     QPixmap pixmap = QPixmap::fromImage(coverArt);
     ui->coverArtLabel->setPixmap(pixmap);
 
@@ -61,11 +63,18 @@ void MainWindow::updateCoverArt(const QImage &coverArt) {
 void MainWindow::updatePlayButton(QMediaPlayer::PlaybackState state){
     if(state == QMediaPlayer::PlayingState){
         ui->playButton->setIcon(style()->standardIcon(QStyle::SP_MediaPause));
+        ui->playButton->setText("Pause");
     }
     else{
         ui->playButton->setIcon(style()->standardIcon(QStyle::SP_MediaPlay));
+        ui->playButton->setText("Play");
+
     }
 }
+void MainWindow::addFileToList(const QString &fileName) {
+    ui->podcastList->addItem(fileName);
+}
+
 void MainWindow::updateProgressBarPosition(qint64 position) {
     ui->progressBar->setValue(static_cast<int>(position));
 }

@@ -28,6 +28,7 @@ private:
     void updatePlayButton(QMediaPlayer::PlaybackState state);
     void updateProgressBarPosition(qint64 position);
     void updateProgressBarMaximum(qint64 duration);
+    void addFileToList(const QString &fileName);
 
 };
 #endif // MAINWINDOW_H

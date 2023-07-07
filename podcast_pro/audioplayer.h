@@ -5,6 +5,7 @@
 #include <QMediaPlayer>
 #include <QMediaMetaData>
 #include <QAudioOutput>
+#include <QPicture>
 
 
 
@@ -35,6 +36,7 @@ signals:
     void coverImageChanged(const QImage &coverImage);
     void artistChanged(const QString &artist);
     void positionChanged(qint64 position);
+    void fileLoaded(const QString &fileName);
     void durationChanged(qint64 duration);
     void stateChanged(QMediaPlayer::PlaybackState state);
 private:
