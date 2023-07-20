@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "audioplayer.h"
+#include <QGridLayout>
+
 
 // constructor of mainwindow class (called when application starts)
 MainWindow::MainWindow(QWidget *parent)
@@ -10,9 +12,11 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->setWindowTitle("Podcast Pro");
+    this->setFixedSize(QSize(400,550));
 
     // center the widgets in vertical layout
     ui->verticalLayout->setAlignment(ui->volumeSlider, Qt::AlignCenter);
+    ui->verticalLayout_2->setContentsMargins(0,0,0,-1);
     ui->menubar->setNativeMenuBar(false);
 
     //set up connections
@@ -74,7 +78,9 @@ void MainWindow::updatePlayButton(QMediaPlayer::PlaybackState state){
 void MainWindow::addFileToList(const QString &fileName) {
     ui->podcastList->addItem(fileName);
 }
+void MainWindow::showAudioPosition(qint64 position) {
 
+}
 void MainWindow::updateProgressBarPosition(qint64 position) {
     ui->progressBar->setValue(static_cast<int>(position));
 }

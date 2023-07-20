@@ -29,6 +29,7 @@ private:
     void updateProgressBarPosition(qint64 position);
     void updateProgressBarMaximum(qint64 duration);
     void addFileToList(const QString &fileName);
+    void showAudioPosition(qint64 position);
 
 };
 #endif // MAINWINDOW_H
