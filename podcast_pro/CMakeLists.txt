@@ -12,6 +12,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Multimedia)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Multimedia)
 
+find_path(TAGLIB_INCLUDE_DIR taglib/tag.h)
+find_library(TAGLIB_LIBRARY tag)
+
+include_directories(${TAGLIB_INCLUDE_DIR})
+
 set(PROJECT_SOURCES
         main.cpp
         mainwindow.cpp
@@ -44,7 +49,7 @@ else()
     endif()
 endif()
 
-target_link_libraries(podcast_pro PRIVATE Qt${QT_VERSION_MAJOR}::Widgets  Qt${QT_VERSION_MAJOR}::Multimedia)
+target_link_libraries(podcast_pro PRIVATE Qt${QT_VERSION_MAJOR}::Widgets  Qt${QT_VERSION_MAJOR}::Multimedia ${TAGLIB_LIBRARY})
 
 set_target_properties(podcast_pro PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com

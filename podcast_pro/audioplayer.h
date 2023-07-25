@@ -6,6 +6,7 @@
 #include <QMediaMetaData>
 #include <QAudioOutput>
 #include <QPicture>
+#include <QString>
 
 
 
@@ -23,12 +24,14 @@ public:
     void setVolume(float volume);
     void loadFiles(const QStringList &filePaths);
     void skip();
+    void setAudioPosition(qint64 position);
     void previous();
     QMediaPlayer::PlaybackState state() const;
     QMediaPlayer::MediaStatus mediaStatus() const;
     QString getTitle() const;
     QString getArtist() const;
-    QImage getCoverImage() const;
+    QString getPositionAndDuration() const;
+    QImage getCoverImage(const std::string &path) const;
     qint64 getPosition() const;
     qint64 getDuration() const;
 signals:
@@ -36,11 +39,14 @@ signals:
     void coverImageChanged(const QImage &coverImage);
     void artistChanged(const QString &artist);
     void positionChanged(qint64 position);
+    void positionAndDurationChanged(const QString PDchanged);
     void fileLoaded(const QString &fileName);
     void durationChanged(qint64 duration);
     void stateChanged(QMediaPlayer::PlaybackState state);
 private:
     QMediaPlayer *m_player;
+    // map from file path to images (thumbnails)
+    std::map<std::string, QImage> m_coverCache;
     QAudioOutput *m_audioOutput;
     std::vector<QString> m_files;
     int m_currentIndex=0;

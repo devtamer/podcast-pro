@@ -1,6 +1,13 @@
 #include "audioplayer.h"
 #include "qimage.h"
 #include <QFileInfo>
+#include <QByteArray>
+#include <taglib/mpegfile.h>
+#include <taglib/id3v2tag.h>
+#include <taglib/id3v2frame.h>
+#include <taglib/id3v2header.h>
+#include <taglib/attachedpictureframe.h>
+
 AudioPlayer::AudioPlayer(QObject *parent)
     : QObject{parent}, m_player(new QMediaPlayer(this)),
       m_audioOutput(new QAudioOutput(this))
@@ -8,8 +15,8 @@ AudioPlayer::AudioPlayer(QObject *parent)
     m_player->setAudioOutput(m_audioOutput);
     connect(m_player, &QMediaPlayer::metaDataChanged, this, [&]() {
         emit titleChanged(getTitle());
-        emit coverImageChanged(getCoverImage());
         emit artistChanged(getArtist());
+        emit positionAndDurationChanged(getPositionAndDuration());
     });
     connect(m_player, &QMediaPlayer::errorOccurred, this, [&](QMediaPlayer::Error error) {
         qDebug() << "Error occurred: " << error;
@@ -23,6 +30,7 @@ AudioPlayer::AudioPlayer(QObject *parent)
     connect(m_player, &QMediaPlayer::durationChanged, this, [&](qint64 duration) {
         emit durationChanged(duration);
     });
+
     // stateChanged signal (play/pause)
     connect(m_player, &QMediaPlayer::playbackStateChanged, this, [&](QMediaPlayer::PlaybackState state) {
         emit stateChanged(state);
@@ -50,6 +58,11 @@ void AudioPlayer::loadFiles(const QStringList &filePaths){
         for(const auto &filePath : filePaths){
             QFileInfo fileInfo(filePath);
             emit fileLoaded(fileInfo.fileName());
+
+            std::string stdFilePath = filePath.toStdString();
+            QImage coverArt = getCoverImage(stdFilePath);
+            emit coverImageChanged(coverArt);
+
         }
 
 
@@ -81,6 +94,9 @@ void AudioPlayer::pause(){
 void AudioPlayer::setVolume(float volume){
     m_audioOutput->setVolume(volume);
 }
+void AudioPlayer::setAudioPosition(qint64 position) {
+    m_player->setPosition(position);
+}
 QMediaPlayer::PlaybackState AudioPlayer::state() const {
     return m_player->playbackState();
 }
@@ -91,15 +107,35 @@ QString AudioPlayer::getTitle() const {
     QMediaMetaData metaData = m_player->metaData();
     return metaData.value(QMediaMetaData::Title).toString();
 }
+QString AudioPlayer::getPositionAndDuration() const {
+    QString result = (QString::number(m_player->position()) + " / " + QString::number(m_player->duration()));
+    return result;
+}
 QString AudioPlayer::getArtist() const {
     QMediaMetaData metaData = m_player->metaData();
     return metaData.value(QMediaMetaData::AlbumArtist).toString();
 }
+QImage AudioPlayer::getCoverImage(const std::string &path) const {
+    TagLib::MPEG::File file(path.c_str());
 
-QImage AudioPlayer::getCoverImage() const {
-    QMediaMetaData metaData = m_player->metaData();
-    return metaData.value(QMediaMetaData::ThumbnailImage).value<QImage>();
+    TagLib::ID3v2::Tag* tag = file.ID3v2Tag();
+    TagLib::ID3v2::FrameList frameList = tag->frameList("APIC");
+
+    if (!frameList.isEmpty()) {
+        TagLib::ID3v2::AttachedPictureFrame* picFrame = static_cast<TagLib::ID3v2::AttachedPictureFrame*>(frameList.front());
+
+        QByteArray imageData(picFrame->picture().data(), picFrame->picture().size());
+
+        return QImage::fromData(imageData);
+    }
+
+    return QImage();
 }
+//QImage AudioPlayer::getCoverImage() const {
+//    QMediaMetaData metaData = m_player->metaData();
+//    qDebug() << metaData.value(QMediaMetaData::ThumbnailImage).isValid();
+//    return metaData.value(QMediaMetaData::CoverArtImage).value<QImage>();
+//}
 qint64 AudioPlayer::getPosition() const {
     return m_player->position();
 }

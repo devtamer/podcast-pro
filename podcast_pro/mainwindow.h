@@ -21,6 +21,7 @@ public:
 private:
     Ui::MainWindow *ui;
     AudioPlayer *m_audioPlayer;
+    QString formatTime(qint64 timeInMs);
     void onUploadFiles();
     void updateTitle(const QString &title);
     void updateArtist(const QString &artist);
@@ -28,8 +29,10 @@ private:
     void updatePlayButton(QMediaPlayer::PlaybackState state);
     void updateProgressBarPosition(qint64 position);
     void updateProgressBarMaximum(qint64 duration);
+    void updatePositionDurationDisplay(qint64 position, qint64 duration);
     void addFileToList(const QString &fileName);
     void showAudioPosition(qint64 position);
+    void changePlayerPosition(int position);
 
 };
 #endif // MAINWINDOW_H

@@ -39,6 +39,9 @@ MainWindow::MainWindow(QWidget *parent)
             m_audioPlayer->play();
         }
     });
+    connect(ui->progressBar, &QSlider::sliderMoved, this, &MainWindow::changePlayerPosition);
+//    connect(m_audioPlayer, &AudioPlayer::positionAndDurationChanged, this, &MainWindow::displayPositionDuration);
+
 
 
 }
@@ -75,17 +78,43 @@ void MainWindow::updatePlayButton(QMediaPlayer::PlaybackState state){
 
     }
 }
+QString MainWindow::formatTime(qint64 timeInMs) {
+    // Convert from ms to seconds
+    int totalSeconds = static_cast<int>(timeInMs / 1000);
+
+    int minutes = totalSeconds / 60;
+    int seconds = totalSeconds % 60;
+
+    // Format as MM:SS
+    return QString("%1:%2").arg(minutes, 2, 10, QLatin1Char('0')).arg(seconds, 2, 10, QLatin1Char('0'));
+}
+void MainWindow::updatePositionDurationDisplay(qint64 position, qint64 duration) {
+    // Convert position and duration to MM:SS format
+    QString positionStr = formatTime(position);
+    QString durationStr = formatTime(duration);
+
+    // Combine position and duration
+    QString display = positionStr + " / " + durationStr;
+
+    // Update the label
+    ui->durationLabel->setText(display);
+}
+
+
 void MainWindow::addFileToList(const QString &fileName) {
     ui->podcastList->addItem(fileName);
 }
-void MainWindow::showAudioPosition(qint64 position) {
-
+void MainWindow::changePlayerPosition(int position) {
+    m_audioPlayer->setAudioPosition(position);
 }
+
 void MainWindow::updateProgressBarPosition(qint64 position) {
     ui->progressBar->setValue(static_cast<int>(position));
+    updatePositionDurationDisplay(position, m_audioPlayer->getDuration());
 }
 
 void MainWindow::updateProgressBarMaximum(qint64 duration) {
     ui->progressBar->setMaximum(static_cast<int>(duration));
+    updatePositionDurationDisplay(m_audioPlayer->getPosition(), duration);
 }
 
