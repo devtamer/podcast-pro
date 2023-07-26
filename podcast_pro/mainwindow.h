@@ -22,6 +22,7 @@ private:
     Ui::MainWindow *ui;
     AudioPlayer *m_audioPlayer;
     QString formatTime(qint64 timeInMs);
+    std::map<int, const QString> playList;
     void onUploadFiles();
     void updateTitle(const QString &title);
     void updateArtist(const QString &artist);

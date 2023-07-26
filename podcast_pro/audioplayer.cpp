@@ -26,6 +26,9 @@ AudioPlayer::AudioPlayer(QObject *parent)
     connect(m_player, &QMediaPlayer::positionChanged, this, [&](qint64 position) {
         emit positionChanged(position);
     });
+    connect(m_player, &QMediaPlayer::hasAudioChanged, this, [&](bool available) {
+        emit hasAudioChanged(available);
+    });
     // duration changed signal
     connect(m_player, &QMediaPlayer::durationChanged, this, [&](qint64 duration) {
         emit durationChanged(duration);
@@ -48,16 +51,20 @@ AudioPlayer::~AudioPlayer() {
 // add files to qString vector
 // skip method: check if vector has anything in it,
 // if it does then iterate to next file
-void AudioPlayer::loadFiles(const QStringList &filePaths){
+void AudioPlayer::loadFiles(const QStringList &filePaths, QListWidget *list){
     m_files = std::vector<QString>(filePaths.begin(), filePaths.end());
     if(!m_files.empty()){
         m_currentIndex = 0;
         m_player->setSource(QUrl::fromLocalFile(m_files[m_currentIndex]));
 
         // add the file paths to the list widget
+        int index = 0;
         for(const auto &filePath : filePaths){
             QFileInfo fileInfo(filePath);
-            emit fileLoaded(fileInfo.fileName());
+            QListWidgetItem *item = new QListWidgetItem(fileInfo.fileName());
+            item->setData(Qt::UserRole, index);
+            list->addItem(item);
+            index++;
 
             std::string stdFilePath = filePath.toStdString();
             QImage coverArt = getCoverImage(stdFilePath);
@@ -74,6 +81,10 @@ void AudioPlayer::skip(){
     }
     m_currentIndex = (m_currentIndex + 1) % m_files.size();
     m_player->setSource(QUrl::fromLocalFile(m_files[m_currentIndex]));
+
+}
+void AudioPlayer::playSelected(int index){
+    m_player->setSource(QUrl::fromLocalFile(m_files[index]));
 
 }
 // previous method: check if vector has anything in it,

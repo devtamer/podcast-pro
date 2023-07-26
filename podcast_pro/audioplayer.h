@@ -5,6 +5,7 @@
 #include <QMediaPlayer>
 #include <QMediaMetaData>
 #include <QAudioOutput>
+#include <QListWidget>
 #include <QPicture>
 #include <QString>
 
@@ -22,8 +23,9 @@ public:
     void play();
     void pause();
     void setVolume(float volume);
-    void loadFiles(const QStringList &filePaths);
+    void loadFiles(const QStringList &filePaths, QListWidget *list);
     void skip();
+    void playSelected(int index);
     void setAudioPosition(qint64 position);
     void previous();
     QMediaPlayer::PlaybackState state() const;
@@ -38,6 +40,7 @@ signals:
     void titleChanged(const QString &title);
     void coverImageChanged(const QImage &coverImage);
     void artistChanged(const QString &artist);
+    void hasAudioChanged(bool available);
     void positionChanged(qint64 position);
     void positionAndDurationChanged(const QString PDchanged);
     void fileLoaded(const QString &fileName);

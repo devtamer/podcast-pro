@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "audioplayer.h"
+#include <QListWidget>
 #include <QGridLayout>
 
 
@@ -18,7 +19,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->verticalLayout->setAlignment(ui->volumeSlider, Qt::AlignCenter);
     ui->verticalLayout_2->setContentsMargins(0,0,0,-1);
     ui->menubar->setNativeMenuBar(false);
-
     //set up connections
     connect(ui->volumeSlider, &QSlider::valueChanged, m_audioPlayer, &AudioPlayer::setVolume);
     connect(ui->skipButton, &QPushButton::clicked, m_audioPlayer, &AudioPlayer::skip);
@@ -30,7 +30,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(m_audioPlayer, &AudioPlayer::stateChanged, this, &MainWindow::updatePlayButton);
     connect(m_audioPlayer, &AudioPlayer::positionChanged, this, &MainWindow::updateProgressBarPosition);
     connect(m_audioPlayer, &AudioPlayer::durationChanged, this, &MainWindow::updateProgressBarMaximum);
-    connect(m_audioPlayer, &AudioPlayer::fileLoaded, this, &MainWindow::addFileToList);
+    connect(ui->podcastList, &QListWidget::itemDoubleClicked, [=](QListWidgetItem *item){
+        int index = item->data(Qt::UserRole).toInt();
+        m_audioPlayer->playSelected(index);
+    });
     connect(ui->playButton, &QPushButton::clicked, this, [&]() {
         if(m_audioPlayer->state()== QMediaPlayer::PlayingState){
             m_audioPlayer->pause();
@@ -52,7 +55,7 @@ MainWindow::~MainWindow()
 }
 void MainWindow::onUploadFiles(){
     QStringList filePaths = QFileDialog::getOpenFileNames(this, "Select one or more files to open");
-    m_audioPlayer->loadFiles(filePaths);
+    m_audioPlayer->loadFiles(filePaths, ui->podcastList);
 }
 void MainWindow::updateTitle(const QString &title) {
     ui->titleLabel->setText(title);
@@ -103,6 +106,7 @@ void MainWindow::updatePositionDurationDisplay(qint64 position, qint64 duration)
 
 void MainWindow::addFileToList(const QString &fileName) {
     ui->podcastList->addItem(fileName);
+
 }
 void MainWindow::changePlayerPosition(int position) {
     m_audioPlayer->setAudioPosition(position);
