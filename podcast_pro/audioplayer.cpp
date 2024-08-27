@@ -53,7 +53,9 @@ AudioPlayer::~AudioPlayer() {
 // if it does then iterate to next file
 void AudioPlayer::loadFiles(const QStringList &filePaths, QListWidget *list){
     m_files = std::vector<QString>(filePaths.begin(), filePaths.end());
-    if(!m_files.empty()){
+    std::cout << "the size of m_files is: " << m_files.size();
+    if (!m_files.empty())
+    {
         m_currentIndex = 0;
         m_player->setSource(QUrl::fromLocalFile(m_files[m_currentIndex]));
 
@@ -71,8 +73,6 @@ void AudioPlayer::loadFiles(const QStringList &filePaths, QListWidget *list){
             emit coverImageChanged(coverArt);
 
         }
-
-
     }
 }
 void AudioPlayer::skip(){
