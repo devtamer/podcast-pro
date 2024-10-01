@@ -5,6 +5,7 @@
 #include <QGridLayout>
 #include <QPainter>
 #include <QPainterPath>
+#include <QSettings>
 
 
 // constructor of mainwindow class (called when application starts)
@@ -56,8 +57,18 @@ MainWindow::~MainWindow()
     delete ui;
 }
 void MainWindow::onUploadFiles(){
-    QStringList filePaths = QFileDialog::getOpenFileNames(this, "Select one or more files to open");
-    m_audioPlayer->loadFiles(filePaths, ui->podcastList);
+    const QString DEFAULT_DIR_KEY("default_dir");
+    QSettings MySettings;
+    QStringList filePaths = QFileDialog::getOpenFileNames(this, "Select one or more files to open", MySettings.value(DEFAULT_DIR_KEY).toString());
+    if(!filePaths.empty()){
+        // set current DIR
+        QDir currDir;
+        MySettings.setValue(DEFAULT_DIR_KEY,
+                            currDir.absoluteFilePath(filePaths.last()));
+        // ensure the are audio files
+        m_audioPlayer->loadFiles(filePaths, ui->podcastList);
+    }
+
 }
 void MainWindow::updateTitle(const QString &title) {
     ui->titleLabel->setText(title);
@@ -81,6 +92,10 @@ QPixmap roundCorners(const QImage &source){
     return target;
 }
 void MainWindow::updateCoverArt(const QImage &coverArt) {
+    if(coverArt.isNull()){
+        ui->coverArtLabel->clear();
+        return;
+    }
     QPixmap final = roundCorners(coverArt);
     int labelWidth = ui->coverArtLabel->width(); int labelHeight = ui->coverArtLabel->height();
     ui->coverArtLabel->setPixmap(final.scaled(labelWidth, labelHeight, Qt::KeepAspectRatio, Qt::SmoothTransformation));

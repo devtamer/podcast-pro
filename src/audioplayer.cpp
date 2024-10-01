@@ -53,7 +53,6 @@ AudioPlayer::~AudioPlayer() {
 // if it does then iterate to next file
 void AudioPlayer::loadFiles(const QStringList &filePaths, QListWidget *list){
     m_files = std::vector<QString>(filePaths.begin(), filePaths.end());
-    std::cout << "the size of m_files is: " << m_files.size();
     if (!m_files.empty())
     {
         m_currentIndex = 0;
