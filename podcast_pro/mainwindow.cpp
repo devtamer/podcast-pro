@@ -3,6 +3,8 @@
 #include "audioplayer.h"
 #include <QListWidget>
 #include <QGridLayout>
+#include <QPainter>
+#include <QPainterPath>
 
 
 // constructor of mainwindow class (called when application starts)
@@ -64,10 +66,24 @@ void MainWindow::updateArtist(const QString &artist) {
     ui->authorLabel->setText(artist);
 
 }
+
+QPixmap roundCorners(const QImage &source){
+    QPixmap target = QPixmap(source.size());
+    target.fill(Qt::transparent);
+    QPainterPath clipPath;
+    clipPath.addRoundedRect(source.rect().adjusted(10, 10, -10, -10), 20, 20);
+
+    QPainter painter (&target);
+    painter.setRenderHint(QPainter::Antialiasing, true);
+    painter.setRenderHint(QPainter::SmoothPixmapTransform, true);
+    painter.setClipPath(clipPath);
+    painter.drawImage(0, 0, source);
+    return target;
+}
 void MainWindow::updateCoverArt(const QImage &coverArt) {
-    qDebug() << "updateCoverArt called, Image dimensions: " << coverArt.width() << "x" << coverArt.height();
-    QPixmap pixmap = QPixmap::fromImage(coverArt);
-    ui->coverArtLabel->setPixmap(pixmap);
+    QPixmap final = roundCorners(coverArt);
+    int labelWidth = ui->coverArtLabel->width(); int labelHeight = ui->coverArtLabel->height();
+    ui->coverArtLabel->setPixmap(final.scaled(labelWidth, labelHeight, Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
 }
 void MainWindow::updatePlayButton(QMediaPlayer::PlaybackState state){

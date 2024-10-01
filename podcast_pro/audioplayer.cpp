@@ -63,7 +63,7 @@ void AudioPlayer::loadFiles(const QStringList &filePaths, QListWidget *list){
         int index = 0;
         for(const auto &filePath : filePaths){
             QFileInfo fileInfo(filePath);
-            QListWidgetItem *item = new QListWidgetItem(fileInfo.fileName());
+            QListWidgetItem *item = new QListWidgetItem(fileInfo.baseName());
             item->setData(Qt::UserRole, index);
             list->addItem(item);
             index++;
@@ -134,6 +134,7 @@ QImage AudioPlayer::getCoverImage(const std::string &path) const {
 
     if (!frameList.isEmpty()) {
         TagLib::ID3v2::AttachedPictureFrame* picFrame = static_cast<TagLib::ID3v2::AttachedPictureFrame*>(frameList.front());
+        qDebug() << "Picture frame size is " << picFrame->picture().size();
 
         QByteArray imageData(picFrame->picture().data(), picFrame->picture().size());
 
