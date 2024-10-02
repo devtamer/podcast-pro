@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QFileDialog>
 #include "audioplayer.h"
+#include "audiocontrols.h"
 #include <QProgressBar>
 
 QT_BEGIN_NAMESPACE
@@ -18,11 +19,16 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    //void on_AudioControls_customContextMenuRequested(const QPoint &pos);
+
 private:
     Ui::MainWindow *ui;
     AudioPlayer *m_audioPlayer;
     QString formatTime(qint64 timeInMs);
     std::map<int, const QString> playList;
+    AudioControls* audio_control;
+    QAction* uploadFile;
     void onUploadFiles();
     void updateTitle(const QString &title);
     void updateArtist(const QString &artist);
