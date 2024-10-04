@@ -24,6 +24,7 @@ public:
     void pause();
     void setVolume(float volume);
     void loadFiles(const QStringList &filePaths, QListWidget *list);
+    void deleteFile(QListWidgetItem *item, QListWidget *list);
     void skip();
     void playSelected(int index);
     void setAudioPosition(qint64 position);

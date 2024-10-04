@@ -33,7 +33,7 @@ private:
     void updateArtist(const QString &artist);
     void updateCoverArt(const QImage &coverArt);
     void showContextMenu(const QPoint &pos);
-    void eraseItem();
+    void deleteItem();
     void updatePlayButton(QMediaPlayer::PlaybackState state);
     void updateProgressBarPosition(qint64 position);
     void updateProgressBarMaximum(qint64 duration);

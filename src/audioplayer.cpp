@@ -89,6 +89,7 @@ void AudioPlayer::skip(){
 
 }
 void AudioPlayer::playSelected(int index){
+    m_currentIndex = index;
     setCurrentFile(index);
 
 }
@@ -106,6 +107,30 @@ void AudioPlayer::play(){
 }
 void AudioPlayer::pause(){
     m_player->pause();
+}
+
+void AudioPlayer::deleteFile(QListWidgetItem *item, QListWidget *list){
+    int index = item->data(Qt::UserRole).toInt();
+    m_files.erase(m_files.begin() + index);
+    delete item;
+
+    if(m_files.empty()){
+        m_currentIndex = -1;
+        m_player->stop();
+    } else if (index <= m_currentIndex){
+        m_currentIndex = std::max(0, m_currentIndex-1);
+        // deleted file was the one playing
+        if(index == m_currentIndex+1){
+            setCurrentFile(m_currentIndex);
+        }
+    }
+
+    for(int i = 0; i < list->count(); i++){
+        QListWidgetItem *item = list->item(i);
+        item->setData(Qt::UserRole, i);
+    }
+
+
 }
 void AudioPlayer::setVolume(float volume){
     m_audioOutput->setVolume(volume);

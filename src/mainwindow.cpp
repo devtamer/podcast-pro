@@ -34,7 +34,9 @@ MainWindow::MainWindow(QWidget *parent)
     QLayout* centralLayout = ui->centralwidget->layout();
     centralLayout->setContentsMargins(0,0,0,0);
     centralLayout->addWidget(audio_control);
-    audio_control->podcastList->setContextMenuPolicy(Qt::CustomContextMenu);
+    audio_control->podcastList->setContextMenuPolicy(Qt::ActionsContextMenu);
+    audio_control->podcastList->addAction("Remove", this, &MainWindow::deleteItem);
+
 
     connect(audio_control->volumeSlider, &QSlider::valueChanged, m_audioPlayer, &AudioPlayer::setVolume);
     connect(audio_control->skipButton, &QPushButton::clicked, m_audioPlayer, &AudioPlayer::skip);
@@ -124,6 +126,10 @@ void MainWindow::updatePlayButton(QMediaPlayer::PlaybackState state){
     }
 }
 
+void MainWindow::deleteItem(){
+    QListWidgetItem *item = audio_control->podcastList->takeItem(audio_control->podcastList->currentRow());
+    m_audioPlayer->deleteFile(item, audio_control->podcastList);
+}
 void MainWindow::showContextMenu(const QPoint &pos)
 {
     // Handle global position
@@ -135,17 +141,6 @@ void MainWindow::showContextMenu(const QPoint &pos)
 
     // Show context menu at handling position
     myMenu.exec(globalPos);
-}
-
-void MainWindow::eraseItem()
-{
-    // If multiple selection is on, we need to erase all selected items
-    for (int i = 0; i < audio_control->podcastList->selectedItems().size(); ++i) {
-        // Get curent item on selected row
-        QListWidgetItem *item = audio_control->podcastList->takeItem(audio_control->podcastList->currentRow());
-        // And remove it
-        delete item;
-    }
 }
 
 QString MainWindow::formatTime(qint64 timeInMs) {
