@@ -39,40 +39,37 @@ public:
 
         // Create Layouts
         QHBoxLayout* buttonLayout = new QHBoxLayout();  // Horizontal layout for buttons
-        buttonLayout->setSpacing(0);
         buttonLayout->addWidget(backButton);
         buttonLayout->addWidget(playButton);
         buttonLayout->addWidget(skipButton);
+        buttonLayout->setContentsMargins(0,0,0,0);
 
         QVBoxLayout* volumeLayout = new QVBoxLayout();  // Vertical layout for volume controls
         volumeLayout->addWidget(volumeLabel);
         volumeLayout->addWidget(volumeSlider);
+        volumeLayout->setContentsMargins(0,0,0,0);
 
         QHBoxLayout* titleAuthLayout = new QHBoxLayout();
-        titleAuthLayout->setSpacing(2);
         titleAuthLayout->addWidget(authorLabel);
         titleAuthLayout->addWidget(durationLabel);
+        titleAuthLayout->setContentsMargins(20,0,0,0);
 
         QVBoxLayout* lowerLayout = new QVBoxLayout();
+        titleLabel->setContentsMargins(20,0,0,0);
         lowerLayout->addWidget(titleLabel);
         lowerLayout->addLayout(titleAuthLayout);
         lowerLayout->addWidget(progressBar);
         lowerLayout->addLayout(buttonLayout);
         lowerLayout->addLayout(volumeLayout);
         lowerLayout->setContentsMargins(20,0,20,0);
+        lowerLayout->setSpacing(2);
 
         QVBoxLayout* mainLayout = new QVBoxLayout(this);  // Main vertical layout
         mainLayout->setContentsMargins(0,0,0,0);
         mainLayout->addWidget(podcastList, 0, Qt::AlignTop);
         mainLayout->addWidget(coverArtLabel, 0, Qt::AlignCenter);
         mainLayout->addLayout(lowerLayout);
-        // mainLayout->addWidget(titleLabel);
-        // mainLayout->addLayout(titleAuthLayout);
-        // mainLayout->addWidget(progressBar);
-        // mainLayout->addLayout(buttonLayout);  // Add button layout
-        // mainLayout->addLayout(volumeLayout);  // Add volume layout
 
-        // Set layout to this widget
         setLayout(mainLayout);
     }
     QPushButton* backButton;

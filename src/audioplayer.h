@@ -28,12 +28,12 @@ public:
     void playSelected(int index);
     void setAudioPosition(qint64 position);
     void previous();
+    void getCoverImage(const std::string &path);
     QMediaPlayer::PlaybackState state() const;
     QMediaPlayer::MediaStatus mediaStatus() const;
     QString getTitle() const;
     QString getArtist() const;
     QString getPositionAndDuration() const;
-    QImage getCoverImage(const std::string &path) const;
     qint64 getPosition() const;
     qint64 getDuration() const;
 signals:
@@ -52,7 +52,8 @@ private:
     std::map<std::string, QImage> m_coverCache;
     QAudioOutput *m_audioOutput;
     std::vector<QString> m_files;
-    int m_currentIndex=0;
+    int m_currentIndex=-1;
+    void setCurrentFile(int current_index);
 
 };
 

@@ -8,7 +8,7 @@
 #include <QPainterPath>
 #include <QSettings>
 #include <QIcon>
-
+#include <QDateTime>
 
 
 
@@ -34,6 +34,7 @@ MainWindow::MainWindow(QWidget *parent)
     QLayout* centralLayout = ui->centralwidget->layout();
     centralLayout->setContentsMargins(0,0,0,0);
     centralLayout->addWidget(audio_control);
+    audio_control->podcastList->setContextMenuPolicy(Qt::CustomContextMenu);
 
     connect(audio_control->volumeSlider, &QSlider::valueChanged, m_audioPlayer, &AudioPlayer::setVolume);
     connect(audio_control->skipButton, &QPushButton::clicked, m_audioPlayer, &AudioPlayer::skip);
@@ -45,10 +46,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(m_audioPlayer, &AudioPlayer::stateChanged, this, &MainWindow::updatePlayButton);
     connect(m_audioPlayer, &AudioPlayer::positionChanged, this, &MainWindow::updateProgressBarPosition);
     connect(m_audioPlayer, &AudioPlayer::durationChanged, this, &MainWindow::updateProgressBarMaximum);
-    connect(audio_control->podcastList, &QListWidget::itemDoubleClicked, [=](QListWidgetItem *item){
-        int index = item->data(Qt::UserRole).toInt();
-        m_audioPlayer->playSelected(index);
-    });
+    connect(audio_control->podcastList, &QListWidget::itemDoubleClicked,this, &MainWindow::itemDoubleClicked);
+    connect(audio_control->podcastList, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(showContextMenu(QPoint)));
     connect(audio_control->playButton, &QPushButton::clicked, this, [&]() {
         if(m_audioPlayer->state()== QMediaPlayer::PlayingState){
             m_audioPlayer->pause();
@@ -58,7 +57,6 @@ MainWindow::MainWindow(QWidget *parent)
         }
     });
     connect(audio_control->progressBar, &QSlider::sliderMoved, this, &MainWindow::changePlayerPosition);
-//    connect(m_audioPlayer, &AudioPlayer::positionAndDurationChanged, this, &MainWindow::displayPositionDuration);
 
 
 
@@ -125,15 +123,46 @@ void MainWindow::updatePlayButton(QMediaPlayer::PlaybackState state){
 
     }
 }
+
+void MainWindow::showContextMenu(const QPoint &pos)
+{
+    // Handle global position
+    QPoint globalPos = audio_control->podcastList->mapToGlobal(pos);
+
+    // Create menu and insert some actions
+    QMenu myMenu;
+    myMenu.addAction("Delete",  this, SLOT(eraseItem()));
+
+    // Show context menu at handling position
+    myMenu.exec(globalPos);
+}
+
+void MainWindow::eraseItem()
+{
+    // If multiple selection is on, we need to erase all selected items
+    for (int i = 0; i < audio_control->podcastList->selectedItems().size(); ++i) {
+        // Get curent item on selected row
+        QListWidgetItem *item = audio_control->podcastList->takeItem(audio_control->podcastList->currentRow());
+        // And remove it
+        delete item;
+    }
+}
+
 QString MainWindow::formatTime(qint64 timeInMs) {
     // Convert from ms to seconds
     int totalSeconds = static_cast<int>(timeInMs / 1000);
 
+    int hours = totalSeconds / 3600;
     int minutes = totalSeconds / 60;
     int seconds = totalSeconds % 60;
 
     // Format as MM:SS
-    return QString("%1:%2").arg(minutes, 2, 10, QLatin1Char('0')).arg(seconds, 2, 10, QLatin1Char('0'));
+    if(hours > 0){
+        return static_cast<QString>(QDateTime::fromSecsSinceEpoch(totalSeconds).toUTC().toString("h:mm:ss"));
+    } else{
+        return QString("%1:%2").arg(minutes, 2, 10, QLatin1Char('0')).arg(seconds, 2, 10, QLatin1Char('0'));
+    }
+
 }
 void MainWindow::updatePositionDurationDisplay(qint64 position, qint64 duration) {
     // Convert position and duration to MM:SS format
@@ -147,7 +176,11 @@ void MainWindow::updatePositionDurationDisplay(qint64 position, qint64 duration)
     audio_control->durationLabel->setText(display);
 }
 
-
+void MainWindow::itemDoubleClicked(QListWidgetItem* item){
+    int index = item->data(Qt::UserRole).toInt();
+    m_audioPlayer->playSelected(index);
+    m_audioPlayer->play();
+}
 void MainWindow::addFileToList(const QString &fileName) {
     audio_control->podcastList->addItem(fileName);
 

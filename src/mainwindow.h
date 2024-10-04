@@ -20,7 +20,6 @@ public:
     ~MainWindow();
 
 private slots:
-    //void on_AudioControls_customContextMenuRequested(const QPoint &pos);
 
 private:
     Ui::MainWindow *ui;
@@ -33,6 +32,8 @@ private:
     void updateTitle(const QString &title);
     void updateArtist(const QString &artist);
     void updateCoverArt(const QImage &coverArt);
+    void showContextMenu(const QPoint &pos);
+    void eraseItem();
     void updatePlayButton(QMediaPlayer::PlaybackState state);
     void updateProgressBarPosition(qint64 position);
     void updateProgressBarMaximum(qint64 duration);
@@ -40,6 +41,7 @@ private:
     void addFileToList(const QString &fileName);
     void showAudioPosition(qint64 position);
     void changePlayerPosition(int position);
+    void itemDoubleClicked(QListWidgetItem* item);
 
 };
 #endif // MAINWINDOW_H

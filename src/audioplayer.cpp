@@ -52,38 +52,44 @@ AudioPlayer::~AudioPlayer() {
 // skip method: check if vector has anything in it,
 // if it does then iterate to next file
 void AudioPlayer::loadFiles(const QStringList &filePaths, QListWidget *list){
-    m_files = std::vector<QString>(filePaths.begin(), filePaths.end());
+    for(const auto &filePath: filePaths){
+        m_files.push_back(filePath);
+    }
+
     if (!m_files.empty())
     {
-        m_currentIndex = 0;
-        m_player->setSource(QUrl::fromLocalFile(m_files[m_currentIndex]));
+        if(m_currentIndex == -1){
+            m_currentIndex = 0;
+            m_player->setSource(QUrl::fromLocalFile(m_files[m_currentIndex]));
+            getCoverImage(m_files[m_currentIndex].toStdString());
+        }
 
         // add the file paths to the list widget
-        int index = 0;
-        for(const auto &filePath : filePaths){
+        for(int i = 0; i < filePaths.size(); i++){
+            QString filePath = filePaths[i];
             QFileInfo fileInfo(filePath);
             QListWidgetItem *item = new QListWidgetItem(fileInfo.baseName());
-            item->setData(Qt::UserRole, index);
+            item->setData(Qt::UserRole, m_files.size()-filePaths.size()+i);
             list->addItem(item);
-            index++;
-
-            std::string stdFilePath = filePath.toStdString();
-            QImage coverArt = getCoverImage(stdFilePath);
-            emit coverImageChanged(coverArt);
-
         }
     }
+}
+
+void AudioPlayer::setCurrentFile(int m_currentIndex){
+    // set source and cover art
+    m_player->setSource(QUrl::fromLocalFile(m_files[m_currentIndex]));
+    getCoverImage(m_files[m_currentIndex].toStdString());
 }
 void AudioPlayer::skip(){
     if(m_files.empty()){
         return;
     }
     m_currentIndex = (m_currentIndex + 1) % m_files.size();
-    m_player->setSource(QUrl::fromLocalFile(m_files[m_currentIndex]));
+    setCurrentFile(m_currentIndex);
 
 }
 void AudioPlayer::playSelected(int index){
-    m_player->setSource(QUrl::fromLocalFile(m_files[index]));
+    setCurrentFile(index);
 
 }
 // previous method: check if vector has anything in it,
@@ -93,7 +99,7 @@ void AudioPlayer::previous(){
         return;
     }
     m_currentIndex = (m_currentIndex - 1 + m_files.size()) % m_files.size();
-    m_player->setSource(QUrl::fromLocalFile(m_files[m_currentIndex]));
+    setCurrentFile(m_currentIndex);
 }
 void AudioPlayer::play(){
     m_player->play();
@@ -125,7 +131,7 @@ QString AudioPlayer::getArtist() const {
     QMediaMetaData metaData = m_player->metaData();
     return metaData.value(QMediaMetaData::AlbumArtist).toString();
 }
-QImage AudioPlayer::getCoverImage(const std::string &path) const {
+void AudioPlayer::getCoverImage(const std::string &path) {
     TagLib::MPEG::File file(path.c_str());
 
     TagLib::ID3v2::Tag* tag = file.ID3v2Tag();
@@ -133,20 +139,15 @@ QImage AudioPlayer::getCoverImage(const std::string &path) const {
 
     if (!frameList.isEmpty()) {
         TagLib::ID3v2::AttachedPictureFrame* picFrame = static_cast<TagLib::ID3v2::AttachedPictureFrame*>(frameList.front());
-        qDebug() << "Picture frame size is " << picFrame->picture().size();
 
         QByteArray imageData(picFrame->picture().data(), picFrame->picture().size());
 
-        return QImage::fromData(imageData);
+        emit coverImageChanged(QImage::fromData(imageData));
     }
 
-    return QImage();
+    return;
 }
-//QImage AudioPlayer::getCoverImage() const {
-//    QMediaMetaData metaData = m_player->metaData();
-//    qDebug() << metaData.value(QMediaMetaData::ThumbnailImage).isValid();
-//    return metaData.value(QMediaMetaData::CoverArtImage).value<QImage>();
-//}
+
 qint64 AudioPlayer::getPosition() const {
     return m_player->position();
 }
