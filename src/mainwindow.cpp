@@ -27,7 +27,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->menubar->setNativeMenuBar(false);
     QAction* uploadFile = new QAction("Upload", this);
     uploadFile->setIcon(QIcon::fromTheme("DocumentNew")); uploadFile->setIconVisibleInMenu(true);
-    ui->menubar->insertAction(ui->helpMenu->menuAction(), uploadFile);
+    ui->menubar->insertAction(ui->menuSettings->menuAction(), uploadFile);
     audio_control = new AudioControls(ui->centralwidget);
     audio_control->setEnabled(true);
     //if(!audio_control) return;
@@ -37,7 +37,14 @@ MainWindow::MainWindow(QWidget *parent)
     audio_control->podcastList->setContextMenuPolicy(Qt::ActionsContextMenu);
     audio_control->podcastList->addAction("Remove", this, &MainWindow::deleteItem);
 
-
+    connect(audio_control->playButton, &QPushButton::clicked, this, [&]() {
+        if(m_audioPlayer->state()== QMediaPlayer::PlayingState){
+            m_audioPlayer->pause();
+        }
+        else{
+            m_audioPlayer->play();
+        }
+    });
     connect(audio_control->volumeSlider, &QSlider::valueChanged, m_audioPlayer, &AudioPlayer::setVolume);
     connect(audio_control->skipButton, &QPushButton::clicked, m_audioPlayer, &AudioPlayer::skip);
     connect(audio_control->backButton, &QPushButton::clicked, m_audioPlayer, &AudioPlayer::previous);
@@ -49,15 +56,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(m_audioPlayer, &AudioPlayer::positionChanged, this, &MainWindow::updateProgressBarPosition);
     connect(m_audioPlayer, &AudioPlayer::durationChanged, this, &MainWindow::updateProgressBarMaximum);
     connect(audio_control->podcastList, &QListWidget::itemDoubleClicked,this, &MainWindow::itemDoubleClicked);
-    connect(audio_control->podcastList, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(showContextMenu(QPoint)));
-    connect(audio_control->playButton, &QPushButton::clicked, this, [&]() {
-        if(m_audioPlayer->state()== QMediaPlayer::PlayingState){
-            m_audioPlayer->pause();
-        }
-        else{
-            m_audioPlayer->play();
-        }
-    });
+    //connect(audio_control->podcastList, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(showContextMenu(QPoint)));
+
     connect(audio_control->progressBar, &QSlider::sliderMoved, this, &MainWindow::changePlayerPosition);
 
 
@@ -174,7 +174,6 @@ void MainWindow::updatePositionDurationDisplay(qint64 position, qint64 duration)
 void MainWindow::itemDoubleClicked(QListWidgetItem* item){
     int index = item->data(Qt::UserRole).toInt();
     m_audioPlayer->playSelected(index);
-    m_audioPlayer->play();
 }
 void MainWindow::addFileToList(const QString &fileName) {
     audio_control->podcastList->addItem(fileName);

@@ -41,6 +41,13 @@
     <addaction name="actionAbout_2"/>
     <addaction name="actionReport_Problem"/>
    </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionSettings"/>
+   </widget>
+   <addaction name="menuSettings"/>
    <addaction name="helpMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -69,6 +76,11 @@
    </property>
    <property name="toolTip">
     <string>Guide</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Set Download Directory</string>
    </property>
   </action>
  </widget>

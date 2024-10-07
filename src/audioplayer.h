@@ -30,6 +30,7 @@ public:
     void setAudioPosition(qint64 position);
     void previous();
     void getCoverImage(const std::string &path);
+    void UpdatePosition();
     QMediaPlayer::PlaybackState state() const;
     QMediaPlayer::MediaStatus mediaStatus() const;
     QString getTitle() const;
@@ -46,6 +47,7 @@ signals:
     void positionAndDurationChanged(const QString PDchanged);
     void fileLoaded(const QString &fileName);
     void durationChanged(qint64 duration);
+    void setPosition();
     void stateChanged(QMediaPlayer::PlaybackState state);
 private:
     QMediaPlayer *m_player;
@@ -53,8 +55,11 @@ private:
     std::map<std::string, QImage> m_coverCache;
     QAudioOutput *m_audioOutput;
     std::vector<QString> m_files;
+    std::vector<QString> pos_files;
     int m_currentIndex=-1;
     void setCurrentFile(int current_index);
+    QString getDurationOfFile(const QString &path) const;
+    QString getFilePath(int index) const;
 
 };
 

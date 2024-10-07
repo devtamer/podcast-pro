@@ -24,7 +24,7 @@ set(PROJECT_SOURCES
         audioplayer.cpp
         mainwindow.h
         mainwindow.ui
-        audiocontrols.cpp
+
         audiocontrols.h
 )
 
@@ -32,6 +32,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(podcast_pro
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        assets/logo.qrc
 
     )
 # Define target properties for Android with Qt 6 as:
